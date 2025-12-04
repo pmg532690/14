@@ -27,8 +27,10 @@ int main(void) {
 	printf("book (2,4): %i, %s\n", (bookshelf[2][4]).number, bookshelf[2][4].title);
 	
 	//2차원 구조체 메모리 반납
+
+	for(i=0;i<3;i++)
+		free(bookshelf[i]);
 	free(bookshelf);
-	
 	return; 
 	
 }
